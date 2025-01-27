@@ -9,8 +9,8 @@ interface User {
 
 const UserPage = async () => {
   const req = await fetch("https://jsonplaceholder.typicode.com/users", {
-    cache: "no-store",
-    // next: { revalidate: 10 },
+  //  cache: "no-store",
+     next: { revalidate: 10 },
   });
 
   // Cashing just working with fetch if you use axious it will not work
@@ -29,7 +29,7 @@ const UserPage = async () => {
       you should make npm run build
       */}
 
-      <p>{new Date().toLocaleTimeString()}</p>
+{/*       <p>{new Date().toLocaleTimeString()}</p> */}
       <table className="table table-bordered mt-10">
         <thead>
           <tr>
